@@ -3,6 +3,7 @@ import 'package:my_gallery/core/models/user.dart';
 import 'package:my_gallery/core/services/api_service.dart';
 import 'package:get/get.dart';
 
+/// Used for testing purposes
 class FakeApiService implements ApiService {
   User? _user;
 

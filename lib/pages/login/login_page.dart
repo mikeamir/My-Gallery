@@ -17,6 +17,7 @@ class LoginPage extends GetView<LoginPageController> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: SizedBox(
+            // The given design size
             height: 926,
             width: double.maxFinite,
             child: Stack(
