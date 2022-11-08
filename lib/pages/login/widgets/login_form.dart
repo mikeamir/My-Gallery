@@ -11,7 +11,7 @@ class LoginForm extends GetView<LoginPageController> {
   const LoginForm({super.key});
 
   static const SizedBox _spacingBox = SizedBox(height: 38);
-  static const double _height = 392;
+  static const double _height = 395;
 
   @override
   Widget build(BuildContext context) {

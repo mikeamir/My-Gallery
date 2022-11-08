@@ -22,7 +22,6 @@ class AppTextField extends StatelessWidget {
     fontSize: 16,
     fontFamily: AppFonts.segoeUI.familyName,
     color: AppColors.text,
-    height: 1.7,
   );
 
   @override
@@ -40,11 +39,11 @@ class AppTextField extends StatelessWidget {
         controller: controller,
         obscureText: isObsecure,
         cursorColor: style.color,
+        textAlignVertical: TextAlignVertical.top,
         decoration: InputDecoration.collapsed(
           hintText: hint,
           hintStyle: style.copyWith(
             color: AppColors.secondaryText,
-            height: 1.7,
           ),
         ),
       ),

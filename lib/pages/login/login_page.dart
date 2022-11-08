@@ -14,21 +14,23 @@ class LoginPage extends GetView<LoginPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SizedBox(
-          height: 926,
-          width: double.maxFinite,
-          child: Stack(
-            fit: StackFit.expand,
-            clipBehavior: Clip.none,
-            children: const [
-              LoginBackground(),
-              LoginBackgroundBlur(),
-              LoginBackgroundLines(),
-              LoginBackgroundShapes(),
-              LoginHeader(),
-              LoginForm(),
-            ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: SizedBox(
+            height: 926,
+            width: double.maxFinite,
+            child: Stack(
+              fit: StackFit.expand,
+              clipBehavior: Clip.none,
+              children: const [
+                LoginBackground(),
+                LoginBackgroundBlur(),
+                LoginBackgroundLines(),
+                LoginBackgroundShapes(),
+                LoginHeader(),
+                LoginForm(),
+              ],
+            ),
           ),
         ),
       ),

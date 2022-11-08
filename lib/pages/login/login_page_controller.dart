@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:my_gallery/core/constants/app_routes.dart';
 import 'package:my_gallery/core/services/api_service.dart';
 import 'package:my_gallery/core/utils/app_functions.dart';
+import 'package:my_gallery/pages/home/home_page_arguments.dart';
+import '../../core/models/user.dart';
 
 enum LoginPageState { normal, loading }
 
@@ -25,8 +27,12 @@ class LoginPageController extends GetxController {
     state.value = LoginPageState.loading;
     try {
       final ApiService apiService = Get.find<ApiService>();
-      await apiService.login(usernameController.text, passwordController.text);
-      Get.offNamed(AppRoutes.home);
+      final User user = await apiService.login(usernameController.text, passwordController.text);
+      Get.offNamed(
+        AppRoutes.home,
+        arguments: HomePageArguments(user: user),
+        parameters: {"user": user.id},
+      );
     } on ApiServiceException catch (e) {
       AppFunctions.showSnackBar(e.name.tr);
     } catch (e) {

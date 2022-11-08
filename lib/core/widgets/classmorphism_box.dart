@@ -15,7 +15,7 @@ class GlassmorphismBox extends StatelessWidget {
     required this.opacity,
     required this.child,
     this.width = double.maxFinite,
-    this.height = double.maxFinite,
+    this.height,
     this.padding,
     this.borderRadius = 0,
     super.key,
