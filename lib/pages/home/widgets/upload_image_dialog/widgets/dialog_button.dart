@@ -38,7 +38,12 @@ class DialogButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/icons/${icon.name}.png'),
+              Image.asset(
+                'assets/icons/${icon.name}.png',
+                width: 32,
+                height: 32,
+                fit: BoxFit.fill,
+              ),
               const SizedBox(width: 7),
               Text(
                 text,

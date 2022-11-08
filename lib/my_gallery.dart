@@ -12,6 +12,7 @@ class MyGallery extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'My Gallery',
       onGenerateTitle: (context) => 'appName'.tr,
       getPages: AppPages.list,
       initialRoute: AppRoutes.login,

@@ -16,7 +16,7 @@ class HomePageHeader extends GetView<HomePageController> {
       width: double.maxFinite,
       height: 145,
       child: Padding(
-        padding: const EdgeInsets.only(left: 27),
+        padding: EdgeInsets.only(left: shouldShowImage ? 27 : 0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,

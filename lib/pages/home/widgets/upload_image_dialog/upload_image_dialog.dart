@@ -22,7 +22,7 @@ class UploadImageDialog extends GetView<HomePageController> {
               opacity: 0.2,
               borderRadius: 32,
               width: double.maxFinite,
-              height: 353,
+              height: 262,
               padding: EdgeInsets.symmetric(
                 horizontal: context.width > 470
                     ? 85
@@ -38,7 +38,7 @@ class UploadImageDialog extends GetView<HomePageController> {
                     text: 'gallery'.tr,
                     icon: DialogButtonIcon.gallery,
                   ),
-                  const Spacer(),
+                  const SizedBox(height: 45),
                   DialogButton(
                     action: () => controller.uploadImage(ImagePickingSource.camera),
                     text: 'camera'.tr,
